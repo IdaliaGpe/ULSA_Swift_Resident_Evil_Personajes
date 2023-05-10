@@ -11,6 +11,8 @@
 		FB27714A2A09936C00AB0AB2 /* CeldaPersonajesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2771492A09936C00AB0AB2 /* CeldaPersonajesController.swift */; };
 		FB27714C2A09A37600AB0AB2 /* Detalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27714B2A09A37600AB0AB2 /* Detalle.swift */; };
 		FB27714E2A09A39100AB0AB2 /* CeldaDetallesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27714D2A09A39100AB0AB2 /* CeldaDetallesController.swift */; };
+		FB34F4C22A0C3CE80029BF1F /* Resident_Evil_Large.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB34F4C12A0C3CE70029BF1F /* Resident_Evil_Large.ttf */; };
+		FB34F4C42A0C44570029BF1F /* DetallesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB34F4C32A0C44570029BF1F /* DetallesController.swift */; };
 		FB4C4C9229F71DBD00557C68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4C4C9129F71DBD00557C68 /* AppDelegate.swift */; };
 		FB4C4C9429F71DBD00557C68 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4C4C9329F71DBD00557C68 /* SceneDelegate.swift */; };
 		FB4C4C9629F71DBD00557C68 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4C4C9529F71DBD00557C68 /* ViewController.swift */; };
@@ -24,6 +26,8 @@
 		FB2771492A09936C00AB0AB2 /* CeldaPersonajesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPersonajesController.swift; sourceTree = "<group>"; };
 		FB27714B2A09A37600AB0AB2 /* Detalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detalle.swift; sourceTree = "<group>"; };
 		FB27714D2A09A39100AB0AB2 /* CeldaDetallesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaDetallesController.swift; sourceTree = "<group>"; };
+		FB34F4C12A0C3CE70029BF1F /* Resident_Evil_Large.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Resident_Evil_Large.ttf; sourceTree = "<group>"; };
+		FB34F4C32A0C44570029BF1F /* DetallesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesController.swift; sourceTree = "<group>"; };
 		FB4C4C8E29F71DBD00557C68 /* Lista.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lista.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB4C4C9129F71DBD00557C68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB4C4C9329F71DBD00557C68 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +78,9 @@
 				FB2771472A09934800AB0AB2 /* Personaje.swift */,
 				FB2771492A09936C00AB0AB2 /* CeldaPersonajesController.swift */,
 				FB27714B2A09A37600AB0AB2 /* Detalle.swift */,
+				FB34F4C32A0C44570029BF1F /* DetallesController.swift */,
 				FB27714D2A09A39100AB0AB2 /* CeldaDetallesController.swift */,
+				FB34F4C12A0C3CE70029BF1F /* Resident_Evil_Large.ttf */,
 			);
 			path = Lista;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 			files = (
 				FB4C4C9E29F71DBE00557C68 /* LaunchScreen.storyboard in Resources */,
 				FB4C4C9B29F71DBE00557C68 /* Assets.xcassets in Resources */,
+				FB34F4C22A0C3CE80029BF1F /* Resident_Evil_Large.ttf in Resources */,
 				FB4C4C9929F71DBD00557C68 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +162,7 @@
 				FB2771482A09934800AB0AB2 /* Personaje.swift in Sources */,
 				FB4C4C9629F71DBD00557C68 /* ViewController.swift in Sources */,
 				FB27714C2A09A37600AB0AB2 /* Detalle.swift in Sources */,
+				FB34F4C42A0C44570029BF1F /* DetallesController.swift in Sources */,
 				FB4C4C9229F71DBD00557C68 /* AppDelegate.swift in Sources */,
 				FB4C4C9429F71DBD00557C68 /* SceneDelegate.swift in Sources */,
 			);

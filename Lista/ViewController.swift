@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //Define altura
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 94
+        return 75
     }
     
     var personajes : [Personaje] = []
@@ -41,6 +41,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBOutlet weak var tvPersonaje: UITableView!
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            let destino = segue.destination as! DetallesController
+            destino.detalles = detalles[tvPersonaje.indexPathForSelectedRow!.row]
+            
+        }
     
     override func viewDidLoad() {
         super.viewDidLoad()
