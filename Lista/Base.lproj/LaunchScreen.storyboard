@@ -15,16 +15,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Portada" translatesAutoresizingMaskIntoConstraints="NO" id="l94-n1-s9s">
+                                <rect key="frame" x="0.0" y="46.666666666666686" width="393" height="759"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l94-n1-s9s" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="FUv-zG-xsL"/>
+                            <constraint firstItem="l94-n1-s9s" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.890845" id="MCq-BS-gez"/>
+                            <constraint firstItem="l94-n1-s9s" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="wGo-mb-RKw"/>
+                            <constraint firstItem="l94-n1-s9s" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wSl-0R-zvP"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Portada" width="738" height="1600"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

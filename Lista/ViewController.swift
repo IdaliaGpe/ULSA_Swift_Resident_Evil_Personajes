@@ -32,11 +32,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         celda.lblGenero.text = personajes[indexPath.row].genero
         celda.lblEdad.text = personajes[indexPath.row].edad
         
-        celda.imgImagen.layer.cornerRadius = celda.imgImagen.frame.size.width / 2
-        celda.imgImagen.clipsToBounds = true
-        
-        celda.imgImagen.image = UIImage(named: personajes[indexPath.row].imagen)
-        
         return celda
     }
     
@@ -44,7 +39,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let destino = segue.destination as! DetallesController
-            destino.detalles = detalles[tvPersonaje.indexPathForSelectedRow!.row]
+            destino.personaje = personajes[tvPersonaje.indexPathForSelectedRow!.row]
             
         }
     
