@@ -68,6 +68,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
                     self.tvPersonaje.reloadData()
                 }
+                //self.imgImagen = UIImage(data: data)
             }
         }
         task.resume()

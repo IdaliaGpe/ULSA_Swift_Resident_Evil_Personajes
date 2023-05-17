@@ -82,6 +82,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.1960422695" green="0.015833333129999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="imgImagen" destination="eax-YS-VpQ" id="15O-gd-Bdo"/>
                                             <outlet property="lblEdad" destination="kzF-8W-MhI" id="8BS-ek-3xP"/>
                                             <outlet property="lblGenero" destination="d9m-MQ-HGh" id="wtg-dQ-c7b"/>
                                             <outlet property="lblNombre" destination="1fN-2t-Q2g" id="cey-Km-12o"/>
@@ -239,6 +240,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Detalles" id="6eq-f7-mrC"/>
                     <connections>
+                        <outlet property="imgImagen" destination="Gso-TN-q6a" id="cup-if-KDd"/>
                         <outlet property="lblEdad" destination="2Ov-Lx-pfK" id="1OM-iI-OLs"/>
                         <outlet property="lblEspecialidad" destination="i05-Mi-lxR" id="xqe-vd-jUS"/>
                         <outlet property="lblEstatura" destination="eag-7p-GEI" id="l8V-75-fBB"/>

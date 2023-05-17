@@ -16,6 +16,7 @@ class DetallesController: UIViewController {
     @IBOutlet weak var lblRelacion: UILabel!
     @IBOutlet weak var lblEspecialidad: UILabel!
     @IBOutlet weak var lblEstatura: UILabel!
+    @IBOutlet weak var imgImagen: UIImageView!
     
     //LLamar Modelo
     var personaje : Personaje?
@@ -34,10 +35,22 @@ class DetallesController: UIViewController {
             lblEspecialidad.text = personaje?.especialidad
             lblEstatura.text = personaje?.estatura
             
+            let url = URL(string: "http://127.0.0.1:8000/storage/fotos/yk0uPLF3acMTjCjPcfw40sD6j31GumCO08IxQXt6.jpg")!
+                    var solicitud = URLRequest(url: url)
+                    
+                    solicitud.httpMethod = "GET"
+                    let task = URLSession.shared.dataTask(with: solicitud) {
+                        data, response, error in
+                        if let data = data {
+                            self.imgImagen.image = UIImage(data: data)
+                        }
+                    }
+                    task.resume()
+        }
+            
             //.layer.cornerRadius = celda.imgImagen.frame.size.width / 2
             //.clipsToBounds = true
             
             //.image = UIImage(named: personajes[indexPath.row].imagen)
         }
-    }
 }
