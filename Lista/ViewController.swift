@@ -32,45 +32,52 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         celda.lblGenero.text = personajes[indexPath.row].genero
         celda.lblEdad.text = personajes[indexPath.row].edad
         
+        let url = URL(string: "http://127.0.0.1:8000/storage/fotos/" + personajes[indexPath.row].imagen)!
+                var solicitud = URLRequest(url: url)
+                
+                solicitud.httpMethod = "GET"
+                let task = URLSession.shared.dataTask(with: solicitud) {
+                    data, response, error in
+                    if let data = data {
+                        celda.imgImagen.image = UIImage(data: data)
+                    }
+                }
+                task.resume()
+        
         return celda
     }
-    
-    @IBOutlet weak var tvPersonaje: UITableView!
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let destino = segue.destination as! DetallesController
-            destino.personaje = personajes[tvPersonaje.indexPathForSelectedRow!.row]
             
-        }
-    
+@IBOutlet weak var tvPersonaje: UITableView!
+            
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destino = segue.destination as! DetallesController
+            destino.personaje = personajes[tvPersonaje.indexPathForSelectedRow!.row]
+                }
+            
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let url = URL(string:
-                        "http://localhost:8000/api/personaje")!
-        
-        var solicitud = URLRequest(url:url)
-        
-        solicitud.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        solicitud.setValue("application/json", forHTTPHeaderField: "Accept")
-        solicitud.httpMethod = "GET"
-        
-        let task = URLSession.shared.dataTask(with: solicitud){
-            data, response, error in
-            if let data = data {
-                if let personaje = try? JSONDecoder().decode([Personaje].self, from: data) {
-                    self.personajes = personaje
-                    DispatchQueue.global(qos: .background).async {
-                        DispatchQueue.main.async {
+                
+        let url = URL(string:"http://localhost:8000/api/personaje")!
+                var solicitud = URLRequest(url:url)
+                solicitud.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                solicitud.setValue("application/json", forHTTPHeaderField: "Accept")
+                solicitud.httpMethod = "GET"
+                
+                let task = URLSession.shared.dataTask(with: solicitud){
+                    data, response, error in
+                    if let data = data {
+                        if let personaje = try? JSONDecoder().decode([Personaje].self, from: data) {
+                            self.personajes = personaje
+                            
+                            DispatchQueue.global(qos: .background).async {
+                                DispatchQueue.main.async {
+                                    self.tvPersonaje.reloadData()
+                                }
+                            }
                             self.tvPersonaje.reloadData()
                         }
                     }
-                    
-                    self.tvPersonaje.reloadData()
                 }
-                //self.imgImagen = UIImage(data: data)
+                task.resume()
             }
         }
-        task.resume()
-    }
-}
